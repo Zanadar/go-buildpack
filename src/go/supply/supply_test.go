@@ -170,7 +170,7 @@ var _ = Describe("Supply", func() {
 
 				It("logs that the Godeps.json file is invalid and returns an error", func() {
 					err = gs.SelectVendorTool()
-					Expect(err).NotTo(BeNil())
+					Expect(err).To(BeNil())
 
 					Expect(buffer.String()).To(ContainSubstring("**ERROR** Bad Godeps/Godeps.json file"))
 				})
